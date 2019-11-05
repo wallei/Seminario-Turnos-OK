@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include'session.php';
 ?>
 <!DOCTYPE HTML>
@@ -30,14 +30,36 @@ include'session.php';
   
 <div class="container">
   <h3>Bienvenido</h3>
-  <h2><p>Seleccione una especialidad:</p></h2>
+  <h2><p>Haga su turno</p></h2>
+<form>
+ <div class="form-group">
+ 	<label for="exampleFormControlSelect1">Especialidad</label>
+ 	<select class="form-control" id="exampleFormControlSelect1">
+	 <option value="1">Dermatologia</option>
+	 <option value="2">Pediatria</option>
+	 <option value="3">Cardiologia</option>
+	 <option value="4">Clinica Medica</option>
+	</select>
+
+	<label for="exampleFormControlSelect1">Doctores</label>
+	<select class="form-control" id="exampleFormControlSelect1">	 
+	 <option value="1">Walter Gazzanego</option>
+	 <option value="2">Martin Torrents</option>
+	 <option value="3">Jose Viñuelas</option>
+	</select>
+	<div class="input-append date form_datetime">
+    <input size="16" type="text" value="" readonly>
+    <span class="add-on"><i class="icon-th"></i></span>
 </div>
-
-
-
-
-			
-
+ 
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: "dd MM yyyy - hh:ii"
+    });
+</script>
+</div>   
+</form>	
+</div>	
 </body>
 </html>
 
