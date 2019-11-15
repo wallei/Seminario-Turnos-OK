@@ -1,6 +1,3 @@
-﻿<?php
-include'session.php';
-?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -15,8 +12,11 @@ include'session.php';
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
 <body>
-
+  <?php
+    include 'session.php';
+  ?>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -32,45 +32,86 @@ include'session.php';
     </ul>
   </div>
 </nav>
-  
+  <html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Ejemplo de consulta desde PHP a MySQL </title>
 <div class="container">
   <h3>Bienvenido</h3>
   <h2><p>Haga su turno</p></h2>
+  <h1 align="center"> Listado de medicos</h1>
+  <table width="70%" border="1px" align="center">
+
+    <tr align="center">
+        <td>especialidad</td>
+        <td>doctor</td>
+        <td>fecha</td>
+        <td>hora</td>
+    </tr>
+  <?php
+            include 'session.php';
+            $link = mysqli_connect("localhost:3307","root","usbw","pankcro");
+            
+            $result = mysqli_query($link,"SELECT * FROM pankcro.turnos");
+            while($row=mysqli_fetch_array($result)){
+              echo '<tr>
+                      <td>'.$row["1"] .'</td>
+                      <td>'.$row["2"] .'</td>
+                      <td>'.$row["3"] .'</td>
+                      <td>'.$row["4"] .'</td>
+              </tr>';
+}
+            
+            mysqli_close($link);
+        ?>
+      </table>
 <form>
  <div class="form-group">
- 	<label for="exampleFormControlSelect1">Especialidad</label>
- 	<select class="form-control" id="exampleFormControlSelect1">
-	 <option value="1">Clinica Medica</option>
-	 <option value="2">Dermatologia</option>
-	 <option value="3">Cardiologia</option>
-	</select>
-
-	<label for="exampleFormControlSelect1">Doctores</label>
-	<select class="form-control" id="exampleFormControlSelect1">	 
-	 <option value="1">Dr. Nick Riviera</option>
-	 <option value="2">Dr. Zoidberg</option>
-	 <option value="3">Dr. Hibbert</option>
-	</select>
-  <script>
-  $( function() {
-    $( "#datepicker" ).datepicker();
-  } );
-  </script>
-<label for="exampleFormControlSelect1">Fecha</label>
+ 	<label for="especialidad">Especialidad</label>
+  <br />
+ 	<input type="text" class="form-control" name="especialidad" placeholder="Especialidad" value="<?php if(isset($especialidad)) echo $especialidad; ?>" required>
+  <br />
+	<label for="doctor">Doctores</label>
+  <br />
+ <input type="text" class="form-control" name="doctor" placeholder="Doctor" value="<?php if(isset($doctor)) echo $doctor; ?>" required>
+ <br />
+<label for="fecha">Fecha</label>
 <br />
-<input type="text" id="datepicker">
+<input type="text" class="form-control" name="fecha" placeholder="Fecha" value="<?php if(isset($fecha)) echo $fecha; ?>" required>
 <br />
-<label for="exampleFormControlSelect1">Hora</label>
+<label for="hora">Hora</label>
 <br />
-<input type="text" class="timepicker">
+<input type="text" class="form-control" name="hora" placeholder="Hora" value="<?php if(isset($hora)) echo $hora; ?>" required>
 <br />
 <br />
-<input type="submit">
-</div>   
+<button id="btn-signup" type="submit" name="boton" class="btn btn-info"><i class="icon-hand-right"></i>Reservar Turno</button> 
+</div>  
 </form>	
-</div>	
+</div>
+<?php
+  if(isset($_POST['boton']))
+    {
+      include 'conexion.php';
+      
+      $especialidad=$_POST["especialidad"];
+      $doctor=$_POST["doctor"];      
+      $fecha=$_POST["fecha"];
+      $hora=$_POST["hora"];         
+     
+     
+
+  $inserteo = "INSERT INTO pankcro.reservas(idreserva,especialidad,doctor,fecha,hora) VALUES(NULL,'$especialidad','$doctor','$fecha','$hora') ";
+
+  mysqli_query($conn, $inserteo);
+
+    include'cerrarConexion.php';
+    //echo "<center>SE REGISTRO CORRECTAMENTE!</center>";
+    echo' ("SE RESERVO TURNO CORRECTAMENTE")';
+  
+  } 
+?>
+
 </body>
-</head>
 </html>
 
 
