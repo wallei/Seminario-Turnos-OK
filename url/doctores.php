@@ -21,22 +21,19 @@
       <h3>Dr. Hibbert</h3>
       <img src="/imagenes/Hibbert.gif" class="img-rounded" alt="Cinque Terre" width="250" height="300">
       
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Cardiologo</p>
     </div>
     <div class="col-sm-4">
       <h3>Dr. Nick Riviera</h3>
       <img src="/imagenes/imagen2.gif" class="iimg-rounded" alt="Cinque Terre">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Medico Clinico</p>
     </div>
     <div class="col-sm-4">
       <h3>Dr. Zoidberg</h3>        
       <img src="/imagenes/zoidberg.png" class="img-circle" alt="Cinque Terre" width="250" height="300">
       
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Dermatologo</p>
     </div>
   </div>
 </div>
