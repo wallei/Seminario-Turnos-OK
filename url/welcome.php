@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Página de Inicio</title>
+    <title>Registro de TURNOS.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
 
         <head>
             <meta charset="utf-8" />
-            <title> Ejemplo de consulta desde PHP a MySQL </title>
+            <title> Registro de TURNO. </title>
             <div class="container">
                 <h2><p>Haga su turno</p></h2>
                 <form method="post">
@@ -92,19 +92,26 @@
 
                     $verificar_reserva = mysqli_query($conn, "SELECT * FROM pankcro.reservas WHERE fecha ='$fecha'");
                     if (mysqli_num_rows($verificar_reserva) > 0){
-                        echo 'La reserva ya esta registrada';
+                        //echo 'La reserva ya esta registrada';
+                        Print '<script>alert("NO se logro registrar el turno! - Turno ya reservado. ");</script>';
+
                         exit;
                     }
                    // Ejecutar consulta
                     $resultado = mysqli_query($conn, $insertar);
                     if(!$resultado){
-                         echo 'Error al registrarse';
+                         //echo 'Error al registrarse';
+                        Print '<script>alert("NO se logro registrar el turno!");</script>';
+
                     } else{
-                        echo 'Reserva registrada exitosamente';
+                        //echo 'Reserva registrada exitosamente';
+                         Print '<script>alert("Turno registrado exitosamente!");</script>';
                     }
 
                 }
                 mysqli_close($conn);
             ?>
+
+        <center><a href="/index.php"><button type="button" class="btn btn-danger">Volver</button></center></a>
 </body>
 </html>

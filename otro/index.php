@@ -21,19 +21,13 @@
 
 <div class="jumbotron text-center">
   <h1>Sistema Registro Turnos Medicos</h1>
-  <p>Sistema desarrollado para la materia Seminario de Lenguaje, dictada por Hernan Merlino.</p> 
+  <p>Sistema desarrollado para realizar turnos medicos</p> 
 
   <a  href="/url/login.php"><button type="button" class="btn btn-primary">Loguearse</button></a>
   <a  href="/url/registro.php"><button type="button" class="btn btn-danger">Registrarse</button></a>
   <a  href="/url/doctores.php"><button type="button" class="btn btn-success">Doctores</button></a>
   <a  href="/url/turnos.php"><button type="button" class="btn btn-primary">Turnos</button></a>
 
-<!--
-- Agregado menu de usuario.
-- Corregidos mensajes de registro.
-- Corregido consulta de turnos.
-- Corregido texto portada index.php
--->
 
 
 </div>

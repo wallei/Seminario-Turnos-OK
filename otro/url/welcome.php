@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Registro de TURNOS.</title>
+    <title>Página de Inicio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -32,7 +32,7 @@
 
         <head>
             <meta charset="utf-8" />
-            <title> Registro de TURNO. </title>
+            <title> Ejemplo de consulta desde PHP a MySQL </title>
             <div class="container">
                 <h2><p>Haga su turno</p></h2>
                 <form method="post">
@@ -88,30 +88,25 @@
                     $hora=$_POST["hora"];            
 
                     // consulta para insertar
-                    $insertar = "INSERT INTO pankcro.reservas (idreserva, especialidad, doctor, fecha, hora) VALUES (NULL, '$especialidad', '$doctor', '$fecha', '$hora')";
+                    $insertar = "INSERT INTO pankcro.reservas (idturno, especialidad, doctor, fecha, hora) VALUES (NULL, '$especialidad', '$doctor', '$fecha', '$hora')";
 
                     $verificar_reserva = mysqli_query($conn, "SELECT * FROM pankcro.reservas WHERE fecha ='$fecha'");
                     if (mysqli_num_rows($verificar_reserva) > 0){
-                        //echo 'La reserva ya esta registrada';
-                        Print '<script>alert("NO se logro registrar el turno! - Turno ya reservado. ");</script>';
-
+                        echo 'La reserva ya esta registrada';
                         exit;
                     }
                    // Ejecutar consulta
                     $resultado = mysqli_query($conn, $insertar);
                     if(!$resultado){
-                         //echo 'Error al registrarse';
-                        Print '<script>alert("NO se logro registrar el turno!");</script>';
-
+                         echo 'Error al registrarse';
                     } else{
-                        //echo 'Reserva registrada exitosamente';
-                         Print '<script>alert("Turno registrado exitosamente!");</script>';
+                        echo 'Reserva registrada exitosamente';
                     }
 
                 }
                 mysqli_close($conn);
             ?>
 
-        <center><a href="/index.php"><button type="button" class="btn btn-danger">Volver</button></center></a>
+            <center><a href="/index.php"><button type="button" class="btn btn-danger">Volver</button></a></center>
 </body>
 </html>

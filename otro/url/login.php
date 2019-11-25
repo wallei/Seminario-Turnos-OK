@@ -22,7 +22,7 @@
          //session_register("usuario");
          $_SESSION['login_user'] = $usuario;
          
-         header("location: /url/welcomeII.php");
+         header("location: /url/welcome.php");
       }else {
         // $error = "Your Login Name or Password is invalid";
          Print '<script>alert("NO SE LOGUEO CORRECTAMENTE - VERIFICAR!");</script>';

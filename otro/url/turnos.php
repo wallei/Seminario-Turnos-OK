@@ -30,7 +30,7 @@
                 		$link = mysqli_connect("localhost:3307","root","usbw","pankcro");
   
                
-                		$result = mysqli_query($link,"SELECT * FROM pankcro.reservas");
+                		$result = mysqli_query($link,"SELECT * FROM pankcro.turnos");
                    		while($row=mysqli_fetch_array($result)){
                    			echo'
                    			<tr>
@@ -48,8 +48,7 @@
             </table>
             	</div>
         	</div>
-          <br>
-        	<center><a href="/index.php"><button type="button" class="btn btn-danger">Volver</button></a></center>
+        	<a href="/index.php"><button type="button" class="btn btn-danger">Volver</button></a>
 		</div>
 	</body>
 </html>
