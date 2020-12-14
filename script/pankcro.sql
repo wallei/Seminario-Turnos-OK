@@ -43,8 +43,7 @@ CREATE TABLE IF NOT EXISTS `reservas` (
 
 INSERT INTO `reservas` (`idReserva`, `especialidad`, `doctor`, `fecha`, `hora`) VALUES
 (20, 'Clinica Medica', 'Nick Riviera', '2019-11-11', '12:05:00'),
-(21, 'Clinico', 'Chicharrito', '2019-11-25', '09:00:00'),
-(22, 'La cola less', 'Muestra un poquito', '2019-11-26', '09:00:00');
+(21, 'Clinico', 'Chicharrito', '2019-11-25', '09:00:00');
 
 -- --------------------------------------------------------
 
