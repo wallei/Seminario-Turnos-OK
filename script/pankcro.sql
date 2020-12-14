@@ -93,13 +93,12 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 INSERT INTO `usuarios` (`idUsuario`, `nombre`, `apellido`, `usuario`, `email`, `clave`) VALUES
 (1, 'John', 'Doe', 'JDoe', 'john@example.com', 'clave'),
 (2, 'Walter', 'Gazzanego', 'wgazzanego', 'wgazzanego@gmail.com', 'lupin123'),
-(3, 'Martin', 'Torrent', 'mtorrent', 'mtorrent@gmail.com', 'culofacil'),
-(4, 'Martin', 'Torrent', 'mtorrent', 'mtorrent@gmail.com', 'culofacil'),
-(5, 'Mauricio', 'macri', 'mmacri', 'mmacri@shemail.com', 'mmacri'),
+(3, 'Martin', 'Torrents', 'mtorrent', 'mtorrent@gmail.com', 'Matrix'),
+(4, 'Martin', 'Torrents', 'mtorrent', 'mtorrent@gmail.com', 'Matrix'),
 (6, 'walter', 'gazzanego', 'wgazzanego', 'wgazzanego@gmail.com', 'wgazzanego'),
 (7, 'w', 'w', 'w', 'w@w.com', 'w'),
 (8, 'a', 'a', 'a', 'a@a.com', 'a'),
-(9, 'marcosPuto', 'marcos', 'marcosPuto', 'marcosputo@gmail.com', 'marcosPuto'),
+(9, 'marcos', 'marcos', 'marcos', 'marcos@gmail.com', 'marcos'),
 (10, 'nahuel', 'nahuel', 'nahuel', 'nahuel@nahuel.com', 'nahuel');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
