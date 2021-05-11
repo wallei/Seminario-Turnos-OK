@@ -1,5 +1,6 @@
-# Seminario-Turnos-OK
-Repositorio para la materia Seminario de Lenguaje - Unla 2019
-Sistema de turnos medicos
+# Seminar-shifts-OK
+Repository for the subject Seminario de lenguajes - Unla 2019
+Medical shift system
 
-Año de mejora del repositorio: 2021/2022
+
+Year of translation / repository improvement: 2021/2022
