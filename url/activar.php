@@ -1,6 +1,6 @@
 <?php
-	//include '/funciones/conexion.php';
-	//include '/url/funciones.php';
+	//include '/functions/connection.php';
+	//include '/url/functions.php';
 
 
 	if (isset($_GET["id"]) AND isset($_GET["val"])) {
