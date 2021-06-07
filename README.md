@@ -4,3 +4,5 @@ Medical shift system
 
 
 Year of translation / repository improvement: 2021/2022
+
+collaborators: Walter Gazzanego and Martin Alexis Torrents
