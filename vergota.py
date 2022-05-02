@@ -3,7 +3,7 @@ entradaArchivo = open("f1.txt", "rt")
 #leer el contenido del archivo en una cadena
 texto = entradaArchivo.read()
 #reemplazar todas las ocurrencias de la cadena requerida
-texto = texto.replace('gode', 'vergota')
+texto = texto.replace('gode', 'siburucha')
 #cerrar el archivo de entrada
 entradaArchivo.close()
  
