@@ -13,3 +13,4 @@ entradaArchivo = open("f1.txt", "wt")
 entradaArchivo.write(texto)
 #cerrar el archivo
 entradaArchivo.close()
+int value =1
